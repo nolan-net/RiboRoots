@@ -6,7 +6,7 @@ RiboRoots is a streamlined bioinformatics application focused on analyzing and v
 
 ## Objective
 
-The aim of RiboRoots is to develop a web application, utilizing Python alongside either Flask or Django, that allows users to select bacterial strains, compare their RNA sequences, and visually represent the relationships through phylogenetic trees.
+The aim of RiboRoots is to develop a program using Python that allows users to select bacterial strains, compare their RNA sequences, and visually represent the relationships through phylogenetic trees.
 
 ## Key Features
 
@@ -18,8 +18,6 @@ The aim of RiboRoots is to develop a web application, utilizing Python alongside
 ## Technology Stack
 
 - **Python**: For backend logic, including sequence analysis and data manipulation.
-- **Flask/Django**: As the framework for the web application.
-- **HTML/CSS/JavaScript**: For creating a responsive and interactive frontend.
 
 ## License
 
