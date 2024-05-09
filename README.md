@@ -12,12 +12,9 @@ The aim of RiboRoots is to develop a program using Python that allows users to s
 
 1. **Reliable Data Source**: Incorporates 'rrnDB version 5.8', a dataset from the Center for Microbial Systems, University of Michigan.
 2. **Algorithmic Sequence Analysis**: Uses Python to compare 16S rRNA gene sequences accurately.
-3. **Interactive Web Application**: Provides a user-friendly interface for users to select strains, initiate sequence comparisons, and view phylogenetic trees.
+3. **Command Line Interface**: Utilizes an easy to use CLI for use across various devices/hardware.
 4. **Inclusive Design**: Ensures the application is intuitive and accessible for users with various levels of expertise.
-
-## Technology Stack
-
-- **Python**: For backend logic, including sequence analysis and data manipulation.
+5. **Docker Build**: Has a readily available Docker Image on Docker Hub (nolannet/riboroots)
 
 ## License
 
