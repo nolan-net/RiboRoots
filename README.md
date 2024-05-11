@@ -24,7 +24,7 @@ Currently the only way to use local graphing with ete3 package is to clones this
   - https://hub.docker.com/r/nolannet/riboroots
 
 ### Local Installation
- * You can either clone this repo, or download just the main.py file. This program is configured to install all necessary packages at user discretion which will have it all ready to go as long as a python environment is setup.
+ * You can either clone this repo, or just download the main.py file. This program is configured to install all necessary packages at user discretion which will have it all ready to go as long as a python environment is setup.
 
 ## License
 
