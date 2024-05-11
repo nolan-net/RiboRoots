@@ -9,9 +9,33 @@
 
 import subprocess
 import os
+import sys
 from ete3 import Tree, TreeStyle
 from Bio import AlignIO, SeqIO, Phylo
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
+
+# Automatic installation of packages if necessary
+def install(package):
+    # Ask user for permission to install the package
+    confirm = input(f"Package {package} not found. Would you like to install it? (yes/no): ")
+    if confirm.lower() == 'yes':
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+            print(f"{package} installed successfully.")
+        except subprocess.CalledProcessError:
+            print(f"Failed to install {package}. Please try installing it manually.")
+    else:
+        print("Installation aborted. The package is required for the program to run.")
+
+# List of required packages
+required_packages = ['biopython', 'ete3', 'numpy']
+
+# Check if required packages are installed
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        install(package)
 
 def cleanup_temp_files():
     # List of temporary files that might not get deleted if quit/crash unexpectedly
