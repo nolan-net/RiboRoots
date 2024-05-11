@@ -16,6 +16,16 @@ The aim of RiboRoots is to develop a program using Python that allows users to s
 4. **Inclusive Design**: Ensures the application is intuitive and accessible for users with various levels of expertise.
 5. **Docker Build**: Has a readily available Docker Image on Docker Hub (nolannet/riboroots)
 
+## Setup
+Currently the only way to use local graphing with ete3 package is to clones this repo and use the source code. However, an easy to use docker image is availabe to users less familiar with such a process.
+
+### Docker
+ * Image availabe here:
+  - https://hub.docker.com/r/nolannet/riboroots
+
+### Local Installation
+ * You can either clone this repo, or download just the main.py file. This program is configured to install all necessary packages at user discretion which will have it all ready to go as long as a python environment is setup.
+
 ## License
 
 This project is open for general use under the GNU GENERAL PUBLIC LICENSE.
