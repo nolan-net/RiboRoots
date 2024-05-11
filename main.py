@@ -10,13 +10,13 @@
 import subprocess
 import os
 import sys
+from importlib.metadata import distribution, PackageNotFoundError
 from ete3 import Tree, TreeStyle
 from Bio import AlignIO, SeqIO, Phylo
 from Bio.Phylo.TreeConstruction import DistanceCalculator, DistanceTreeConstructor
 
 # Automatic installation of packages if necessary
 def install(package):
-    # Ask user for permission to install the package
     confirm = input(f"Package {package} not found. Would you like to install it? (yes/no): ")
     if confirm.lower() == 'yes':
         try:
@@ -27,14 +27,12 @@ def install(package):
     else:
         print("Installation aborted. The package is required for the program to run.")
 
-# List of required packages
 required_packages = ['biopython', 'ete3', 'numpy']
 
-# Check if required packages are installed
 for package in required_packages:
     try:
-        __import__(package)
-    except ImportError:
+        distribution(package)
+    except PackageNotFoundError:
         install(package)
 
 def cleanup_temp_files():
